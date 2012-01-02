@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+  <filter>
+  	<filter-name>loginedFilter</filter-name>
+  	<filter-class>edu.stevens.bbs.filter.LoginedFilter</filter-class>
+  </filter>	
+  <filter>
+  	<filter-name>encodingFilter</filter-name>
+  	<filter-class>edu.stevens.bbs.filter.EncodingFilter</filter-class>
+  </filter>
+	
+  <filter-mapping>
+  	<filter-name>encodingFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+	
+  <filter-mapping>
+  	<filter-name>loginedFilter</filter-name>
+  	<url-pattern>/post.jsp</url-pattern>
+  </filter-mapping>	
+  <filter-mapping>
+  	<filter-name>loginedFilter</filter-name>
+  	<url-pattern>/reply.jsp</url-pattern>
+  </filter-mapping>
+   <filter-mapping>
+  	<filter-name>loginedFilter</filter-name>
+  	<url-pattern>/userModify.jsp</url-pattern>
+  </filter-mapping>		
+	
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserImageUploadServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.UserImageUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>JiaJingServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.JiaJingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ZhidingServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.ZhidingServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteCategoriesServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.DeleteCategoriesServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCategoryServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.AddCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ModifyCategoryServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.ModifyCategoryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddBanZhuServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.AddBanZhuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteBanZhuServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.DeleteBanZhuServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UserModifyServlet</servlet-name>
+    <servlet-class>edu.stevens.bbs.servlet.UserModifyServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserImageUploadServlet</servlet-name>
+    <url-pattern>/UserImageUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JiaJingServlet</servlet-name>
+    <url-pattern>/JiaJingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ZhidingServlet</servlet-name>
+    <url-pattern>/ZhidingServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteCategoriesServlet</servlet-name>
+    <url-pattern>/admin/DeleteCategoriesServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCategoryServlet</servlet-name>
+    <url-pattern>/admin/AddCategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyCategoryServlet</servlet-name>
+    <url-pattern>/admin/ModifyCategoryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBanZhuServlet</servlet-name>
+    <url-pattern>/admin/AddBanZhuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBanZhuServlet</servlet-name>
+    <url-pattern>/admin/DeleteBanZhuServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserModifyServlet</servlet-name>
+    <url-pattern>/UserModifyServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
